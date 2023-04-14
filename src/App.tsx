@@ -13,8 +13,8 @@ import Larissa from "./components/img/larissa.jpg";
 
 type Character = {
   id?: number;
-  name: string;
   image: string;
+  name: string;
 };
 
 const characters: Character[] = [
@@ -51,9 +51,9 @@ const characters: Character[] = [
 ];
 
 function App() {
-  const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [clicked, setClicked] = useState<number[]>([]);
+  const [score, setScore] = useState(0);
 
   function shuffle(array: Character[]) {
     let currentIndex = array.length;
