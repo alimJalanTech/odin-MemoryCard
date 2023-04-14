@@ -5,8 +5,8 @@ import { wrap } from "module";
 
 type CharacterCardProps = {
   id: number;
-  name: string;
   image: string;
+  name: string;
   onClick?: () => void;
 };
 
