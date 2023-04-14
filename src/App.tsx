@@ -63,10 +63,10 @@ function App() {
     while (currentIndex !== 0) {
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
-
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
     }
 
     return array;
@@ -88,7 +88,7 @@ function App() {
   };
 
   return (
-    <div>
+    <>
       <UserHeader score={score} bestScore={bestScore} />
       <ContentStyle>
         {characters.map((character) => (
@@ -101,7 +101,7 @@ function App() {
           />
         ))}
       </ContentStyle>
-    </div>
+    </>
   );
 }
 
