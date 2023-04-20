@@ -32,4 +32,38 @@ const ContentStyle = styled("div", {
   height: "100vh",
 });
 
-export { HeadStyle, ContentStyle };
+type CardStyles = {
+  Root: {
+    display: string;
+    flexDirection: string;
+    flexWrap: string;
+    justifyContent: string;
+    alignItems: string;
+    width: string;
+    minHeight: string;
+    borderRadius: string;
+    margin: string;
+    textAlign: string;
+    backgroundColor: string;
+    border: string;
+  };
+};
+
+const cardStyles: CardStyles = {
+  Root: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "200px",
+    minHeight: "250px",
+    borderRadius: "10px",
+    margin: "40px",
+    textAlign: "center",
+    backgroundColor: "gray",
+    border: "2px solid",
+  },
+};
+
+export { HeadStyle, ContentStyle, cardStyles };

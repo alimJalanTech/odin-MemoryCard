@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import { Card } from "baseui/card";
-import { wrap } from "module";
+import { cardStyles } from "../styled/style";
 
 type CharacterCardProps = {
   id: number;
@@ -21,20 +21,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
       <Card
         overrides={{
           Root: {
-            style: {
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "200px",
-              minHeight: "250px",
-              borderRadius: "10px",
-              margin: "40px",
-              textAlign: "center",
-              backgroundColor: "gray",
-              border: "2px solid",
-            },
+            style: cardStyles,
           },
         }}
       >
