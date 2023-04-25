@@ -12,13 +12,12 @@ type Character = {
 };
 
 function App() {
-  const [bestScore, setBestScore] = useState(0);
+  const [bestScore, setBestScore] = useState<number>(0);
   const [clicked, setClicked] = useState<number[]>([]);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState<number>(0);
 
-  function shuffle(array: Character[]): void | Character[] {
+  function shuffle(array: Character[]): Character[] {
     let currentIndex = array.length;
-    let temporaryValue: Character;
     let randomIndex: number;
 
     while (currentIndex !== 0) {
@@ -33,7 +32,7 @@ function App() {
     return array;
   }
 
-  const handleClick = (id: number) => {
+  const handleClick = (id: number): void => {
     if (clicked.includes(id)) {
       setScore(0);
       setClicked([]);

@@ -32,24 +32,8 @@ const ContentStyle = styled("div", {
   height: "100vh",
 });
 
-type CardStyles = {
-  Root: {
-    display: string;
-    flexDirection: string;
-    flexWrap: string;
-    justifyContent: string;
-    alignItems: string;
-    width: string;
-    minHeight: string;
-    borderRadius: string;
-    margin: string;
-    textAlign: string;
-    backgroundColor: string;
-    border: string;
-  };
-};
 
-const cardStyles: CardStyles = {
+const cardStyles = {
   Root: {
     display: "flex",
     flexDirection: "row",
