@@ -7,7 +7,7 @@ type CharacterCardProps = {
   id: number;
   image: string;
   name: string;
-  onClick?: () => void;
+  onClick: () => void;
 };
 
 const CharacterCard: React.FC<CharacterCardProps> = ({
